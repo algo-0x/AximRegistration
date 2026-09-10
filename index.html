@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AXIM WEALTH by GreenOOH — Registration Form</title>
+<meta name="description" content="Official registration for AXIM Wealth by GreenOOH. AXIM Financial Solution.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{--bg-dark:#07080a;--bg-card:rgba(18,20,28,0.75);--glass-border:rgba(212,175,55,0.22);--gold-primary:#d4af37;--gold-light:#f3e5ab;--gold-dark:#aa771c;--gold-gradient:linear-gradient(135deg,#f3e5ab 0,#d4af37 50%,#aa771c 100%);--gold-glow:0 0 25px rgba(212,175,55,0.25);--text-main:#ffffff;--text-muted:#a0a6b8;--error-color:#ff5252;--good-color:#3ddc84;--font-heading:'Cinzel',serif;--font-body:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif;--radius-lg:20px;--radius-md:12px;--radius-sm:8px}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{background-color:var(--bg-dark);color:var(--text-main);font-family:var(--font-body);min-height:100vh;overflow-x:hidden;line-height:1.6}
+#bgCanvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.app-wrapper{position:relative;z-index:1;display:flex;flex-direction:column;min-height:100vh;max-width:1280px;margin:0 auto;padding:0 1.5rem}
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:2rem 0;border-bottom:1px solid rgba(255,255,255,0.05)}
+.brand-title{font-family:var(--font-heading);font-size:1.6rem;font-weight:800;letter-spacing:2px;background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.brand-sub{font-size:0.75rem;color:var(--text-muted);letter-spacing:3px;text-transform:uppercase;margin-top:-3px}
+.official-tag{font-size:0.8rem;color:var(--text-muted);background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);padding:0.5rem 1rem;border-radius:50px;display:flex;align-items:center;gap:8px}
+.official-tag i{color:var(--gold-primary)}
+.main-container{flex:1;padding:3rem 0}
+.view-section{transition:opacity .4s ease,transform .4s ease}
+.view-section.hidden{display:none!important;opacity:0;transform:translateY(20px)}
+.hero-section{text-align:center;max-width:800px;margin:0 auto 3rem auto}
+.badge-pill{display:inline-flex;align-items:center;gap:8px;padding:.4rem 1.2rem;background:rgba(212,175,55,0.08);border:1px solid var(--glass-border);border-radius:50px;font-size:.75rem;font-weight:600;letter-spacing:2px;color:var(--gold-light);margin-bottom:1.5rem}
+.badge-dot{width:6px;height:6px;background:var(--gold-primary);border-radius:50%;box-shadow:0 0 10px var(--gold-primary);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:.4;transform:scale(.9)}50%{opacity:1;transform:scale(1.2)}}
+.hero-title{font-family:var(--font-heading);font-size:3.2rem;font-weight:700;line-height:1.2;margin-bottom:.8rem;background:linear-gradient(180deg,#ffffff 0,#c4c8d8 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-subtitle{font-size:1.5rem;font-weight:500;color:var(--gold-light);margin-bottom:1.2rem}
+.hero-text{font-size:1.05rem;color:var(--text-muted);max-width:680px;margin:0 auto 2rem auto;font-weight:300}
+.pilot-card{max-width:820px;margin:0 auto 2.5rem auto;background:rgba(212,175,55,0.05);border:1px solid var(--glass-border);border-left:3px solid var(--gold-primary);border-radius:var(--radius-md);padding:1.6rem 1.8rem}
+.pilot-card h4{font-family:var(--font-heading);color:var(--gold-light);font-size:1.15rem;margin-bottom:.9rem;letter-spacing:.5px}
+.pilot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem 1.6rem;font-size:.9rem;color:var(--text-muted)}
+.pilot-grid strong{color:var(--text-main)}
+.pilot-note{margin-top:1rem;font-size:.82rem;color:var(--text-muted);line-height:1.6;border-top:1px solid rgba(255,255,255,.06);padding-top:.9rem}
+.glass-card{background:var(--bg-card);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:3rem;box-shadow:0 20px 50px rgba(0,0,0,0.6),inset 0 1px 0 rgba(255,255,255,0.1);max-width:820px;margin:0 auto}
+.card-header{margin-bottom:2.2rem;text-align:center}
+.card-header h3{font-family:var(--font-heading);font-size:1.8rem;color:var(--text-main);margin-bottom:.4rem}
+.card-header p{color:var(--text-muted);font-size:.95rem}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem}
+.full-width{grid-column:span 2}
+.input-group{display:flex;flex-direction:column;gap:.5rem}
+.input-group label{font-size:.85rem;font-weight:600;letter-spacing:.5px;color:#d1d5e4}
+.req{color:var(--gold-primary)}
+.hint{font-size:.75rem;color:var(--text-muted);margin-top:-2px}
+.input-inner{position:relative;display:flex;align-items:center;background:rgba(10,12,18,0.6);border:1px solid var(--glass-border);border-radius:var(--radius-md);padding:0 1rem;transition:all .3s ease}
+.input-inner i{color:var(--text-muted);font-size:.95rem;margin-right:.75rem}
+.input-inner .prefix{font-size:.9rem;color:var(--gold-light);font-weight:600;margin-right:.5rem;padding-right:.5rem;border-right:1px solid rgba(255,255,255,0.1)}
+.input-inner input,.input-inner select{width:100%;height:50px;background:transparent;border:none;outline:none;color:#ffffff;font-family:var(--font-body);font-size:.95rem}
+.input-inner input[type="date"]{color-scheme:dark}
+.input-inner select{cursor:pointer;appearance:none;-webkit-appearance:none}
+.input-inner select option{background:#12141c;color:#ffffff}
+.input-inner:focus-within{border-color:var(--gold-primary);box-shadow:0 0 15px rgba(212,175,55,0.2)}
+.input-group.invalid .input-inner{border-color:var(--error-color)}
+.error-msg{font-size:.75rem;color:var(--error-color);display:none;margin-top:.2rem}
+.input-group.invalid .error-msg,.checkbox-group.invalid .error-msg{display:block}
+.checkbox-stack{display:flex;flex-direction:column;gap:1rem;margin-top:.5rem}
+.checkbox-group{display:flex;flex-direction:column;gap:.4rem}
+.custom-checkbox{display:flex;align-items:flex-start;gap:12px;cursor:pointer;user-select:none;font-size:.85rem;color:var(--text-muted);line-height:1.5}
+.custom-checkbox input{position:absolute;opacity:0;cursor:pointer;height:0;width:0}
+.checkmark{position:relative;top:2px;min-width:18px;height:18px;background:rgba(10,12,18,0.6);border:1px solid var(--glass-border);border-radius:4px;transition:all .2s ease;flex:0 0 auto}
+.custom-checkbox:hover input ~ .checkmark{border-color:var(--gold-primary)}
+.custom-checkbox input:checked ~ .checkmark{background:var(--gold-primary);border-color:var(--gold-primary)}
+.checkmark::after{content:"";position:absolute;display:none;left:6px;top:2px;width:4px;height:9px;border:solid #000;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.custom-checkbox input:checked ~ .checkmark::after{display:block}
+.form-alert{padding:1rem;border-radius:var(--radius-md);font-size:.88rem;margin-top:1.5rem;text-align:center}
+.form-alert.error{background:rgba(255,82,82,0.1);border:1px solid rgba(255,82,82,0.3);color:var(--error-color)}
+.form-alert.hidden{display:none}
+.form-actions{margin-top:2rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:.95rem 2rem;font-family:var(--font-body);font-size:.95rem;font-weight:700;letter-spacing:1px;border-radius:var(--radius-md);border:none;cursor:pointer;transition:all .3s ease;text-decoration:none}
+.btn-block{width:100%}
+.btn-gold{background:var(--gold-gradient);color:#08090c;box-shadow:var(--gold-glow)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 0 30px rgba(212,175,55,0.4)}
+.btn-gold:disabled{opacity:.6;cursor:not-allowed;transform:none}
+.btn-outline-gold{background:transparent;border:1px solid var(--gold-primary);color:var(--gold-light)}
+.btn-outline-gold:hover{background:rgba(212,175,55,0.1);transform:translateY(-2px)}
+.spinner{width:18px;height:18px;border:2px solid rgba(0,0,0,0.2);border-top-color:#000;border-radius:50%;animation:spin .8s linear infinite}
+.spinner.hidden{display:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+.success-card{text-align:center;padding:4rem 2rem;max-width:650px}
+.success-icon-wrapper{position:relative;width:80px;height:80px;margin:0 auto 2rem auto;background:var(--gold-gradient);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.2rem;color:#0a0c10}
+.icon-pulse{position:absolute;width:100%;height:100%;border-radius:50%;border:2px solid var(--gold-primary);animation:pulse-ring 2s infinite}
+@keyframes pulse-ring{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.6);opacity:0}}
+.success-title{font-family:var(--font-heading);font-size:2.2rem;letter-spacing:2px;background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:1rem}
+.success-lead{font-size:1.2rem;color:#ffffff;font-weight:600;margin-bottom:.8rem}
+.success-sub{font-size:.95rem;color:var(--text-muted);max-width:480px;margin:0 auto 2.5rem auto}
+.modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);backdrop-filter:blur(8px);z-index:1000;display:flex;align-items:center;justify-content:center;padding:1.5rem}
+.modal-overlay.hidden{display:none!important}
+.modal-card{background:#12141c;border:1px solid var(--glass-border);border-radius:var(--radius-lg);width:100%;max-width:600px;max-height:85vh;display:flex;flex-direction:column;box-shadow:0 25px 60px rgba(0,0,0,0.8)}
+.modal-header{padding:1.5rem;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center}
+.modal-header h3{font-family:var(--font-heading);color:var(--gold-light);font-size:1.3rem}
+.modal-close{background:transparent;border:none;color:var(--text-muted);font-size:1.2rem;cursor:pointer}
+.modal-body{padding:1.5rem;overflow-y:auto;font-size:.9rem;color:var(--text-muted);line-height:1.7}
+.modal-footer{padding:1.2rem 1.5rem;border-top:1px solid rgba(255,255,255,0.08)}
+.footer{margin-top:auto;padding:2.5rem 0 2rem 0;border-top:1px solid rgba(255,255,255,0.05);font-size:.8rem;color:var(--text-muted)}
+.footer-disclaimer{max-width:900px;margin:0 auto 1.5rem auto;text-align:center;line-height:1.6}
+.footer-bottom{text-align:center;opacity:.7}
+.payment-card{max-width:600px;margin:0 auto;text-align:center}
+.payment-amount{font-family:var(--font-heading);font-size:2.4rem;color:var(--gold-light);margin:.5rem 0 1.5rem 0}
+.qr-frame{width:240px;height:240px;margin:0 auto 1.5rem auto;background:#ffffff;border-radius:var(--radius-md);border:3px solid var(--gold-primary);box-shadow:0 0 30px rgba(212,175,55,0.25);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.qr-frame img{width:100%;height:100%;object-fit:contain}
+.qr-placeholder{color:#888;font-size:.8rem;padding:1rem;text-align:center}
+.payment-steps{text-align:left;background:rgba(212,175,55,0.05);border:1px solid var(--glass-border);border-radius:var(--radius-md);padding:1.2rem 1.4rem;margin:1.5rem 0;font-size:.88rem;color:var(--text-muted);line-height:1.9}
+.payment-steps b{color:var(--text-main)}
+.payment-back{margin-top:1rem;background:transparent;border:none;color:var(--text-muted);font-size:.85rem;text-decoration:underline;cursor:pointer}
+@media (max-width:768px){
+  .hero-title{font-size:2.2rem}
+  .hero-subtitle{font-size:1.2rem}
+  .form-grid{grid-template-columns:1fr}
+  .full-width{grid-column:span 1}
+  .glass-card{padding:2rem 1.25rem}
+  .navbar{flex-direction:column;gap:1rem;align-items:flex-start}
+  .pilot-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<canvas id="bgCanvas"></canvas>
+<div class="app-wrapper">
+<header class="navbar">
+  <div class="logo-container">
+    <div class="brand-title">AXIM WEALTH</div>
+    <div class="brand-sub">by GreenOOH</div>
+  </div>
+  <div class="nav-right">
+    <div class="official-tag"><i class="fa-solid fa-shield-halved"></i> AXIM Financial Solution</div>
+  </div>
+</header>
+
+<main class="main-container">
+  <div id="registrationView" class="view-section active">
+    <section class="hero-section">
+      <div class="badge-pill"><span class="badge-dot"></span> OFFICIAL REGISTRATION</div>
+      <h1 class="hero-title">AXIM Wealth Registration</h1>
+      <h2 class="hero-subtitle">Complete your details to join the program.</h2>
+      <p class="hero-text">Fill in your details accurately below. After submitting your information, you will be directed to the payment step to complete your registration.</p>
+    </section>
+
+    <div class="pilot-card">
+      <h4><i class="fa-solid fa-crown" style="margin-right:8px;color:var(--gold-primary)"></i>AXIM Wealth — Limited 5-Member Pilot</h4>
+      <div class="pilot-grid">
+        <div>Initial contribution: <strong>₹1,250</strong></div>
+        <div>Participants: <strong>5 only</strong></div>
+        <div>Returns: <strong>Market-dependent, not guaranteed</strong></div>
+        <div>Past performance: <strong>No guarantee of future returns</strong></div>
+      </div>
+      <div class="pilot-note">Participant acknowledges that capital and returns may be subject to market risk. Please read all declarations below carefully before submitting.</div>
+    </div>
+
+    <section id="formCard" class="form-card-wrapper">
+      <div class="glass-card">
+        <div class="card-header">
+          <h3>Registration Form</h3>
+          <p>Complete the details below to register for the AXIM Wealth program.</p>
+        </div>
+
+        <form id="interestForm" novalidate>
+          <div class="form-grid">
+
+            <div class="input-group full-width">
+              <label for="fullName">Full Name <span class="req">*</span></label>
+              <div class="input-inner">
+                <i class="fa-regular fa-user"></i>
+                <input type="text" id="fullName" placeholder="e.g. Vikramaditya Sharma" required>
+              </div>
+              <span class="error-msg" id="err-fullName">Please enter your full name.</span>
+            </div>
+
+            <div class="input-group">
+              <label for="dob">Date of Birth <span class="req">*</span></label>
+              <div class="input-inner">
+                <i class="fa-solid fa-cake-candles"></i>
+                <input type="date" id="dob" required>
+              </div>
+              <span class="error-msg" id="err-dob">You must be at least 18 years old.</span>
+            </div>
+
+            <div class="input-group">
+              <label for="mobile">Mobile / WhatsApp Number <span class="req">*</span></label>
+              <div class="input-inner">
+                <span class="prefix">+91</span>
+                <input type="tel" id="mobile" placeholder="9876543210" maxlength="10" required>
+              </div>
+              <span class="error-msg" id="err-mobile">Enter a valid 10-digit mobile number.</span>
+            </div>
+
+            <div class="input-group full-width">
+              <label for="email">Email Address <span class="req">*</span></label>
+              <div class="input-inner">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" id="email" placeholder="name@example.com" required>
+              </div>
+              <span class="error-msg" id="err-email">Enter a valid email address.</span>
+            </div>
+
+            <div class="input-group full-width">
+              <label for="aadhaar">Aadhaar Card Number <span class="req">*</span></label>
+              <div class="input-inner">
+                <i class="fa-solid fa-id-card"></i>
+                <input type="text" id="aadhaar" placeholder="XXXX XXXX XXXX" maxlength="12" inputmode="numeric" required>
+              </div>
+              <span class="hint">12-digit Aadhaar number. Used only for identity verification and kept private.</span>
+              <span class="error-msg" id="err-aadhaar">Enter a valid 12-digit Aadhaar number.</span>
+            </div>
+
+            <div class="input-group">
+              <label for="city">City <span class="req">*</span></label>
+              <div class="input-inner">
+                <i class="fa-solid fa-city"></i>
+                <select id="city" required>
+                  <option value="" disabled selected>Select City</option>
+                  <option value="Mumbai">Mumbai</option>
+                  <option value="Delhi NCR">Delhi NCR</option>
+                  <option value="Bengaluru">Bengaluru</option>
+                  <option value="Hyderabad">Hyderabad</option>
+                  <option value="Ahmedabad">Ahmedabad</option>
+                  <option value="Surat">Surat</option>
+                  <option value="Chennai">Chennai</option>
+                  <option value="Kolkata">Kolkata</option>
+                  <option value="Pune">Pune</option>
+                  <option value="Jaipur">Jaipur</option>
+                  <option value="Lucknow">Lucknow</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <span class="error-msg" id="err-city">Select your city.</span>
+            </div>
+            <div class="input-group full-width hidden" id="cityOtherWrap">
+              <label for="cityOther">Please specify your city <span class="req">*</span></label>
+              <div class="input-inner">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" id="cityOther" placeholder="Enter your city name">
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="state">State <span class="req">*</span></label>
+              <div class="input-inner">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <select id="state" required>
+                  <option value="" disabled selected>Select State</option>
+                  <option value="Andhra Pradesh">Andhra Pradesh</option>
+                  <option value="Delhi NCR">Delhi NCR</option>
+                  <option value="Gujarat">Gujarat</option>
+                  <option value="Karnataka">Karnataka</option>
+                  <option value="Maharashtra">Maharashtra</option>
+                  <option value="Punjab">Punjab</option>
+                  <option value="Rajasthan">Rajasthan</option>
+                  <option value="Tamil Nadu">Tamil Nadu</option>
+                  <option value="Telangana">Telangana</option>
+                  <option value="Uttar Pradesh">Uttar Pradesh</option>
+                  <option value="West Bengal">West Bengal</option>
+                  <option value="Other">Other / Union Territory</option>
+                </select>
+              </div>
+              <span class="error-msg" id="err-state">Select your state.</span>
+            </div>
+
+            <div class="input-group full-width">
+              <label for="occupation">Occupation <span class="req">*</span></label>
+              <div class="input-inner">
+                <i class="fa-solid fa-briefcase"></i>
+                <select id="occupation" required>
+                  <option value="" disabled selected>Select Occupation</option>
+                  <option value="Salaried Employee">Salaried Employee</option>
+                  <option value="Business Owner / Self-Employed">Business Owner / Self-Employed</option>
+                  <option value="Professional (Doctor, CA, Engineer, etc.)">Professional (Doctor, CA, Engineer, etc.)</option>
+                  <option value="Freelancer">Freelancer</option>
+                  <option value="Student">Student</option>
+                  <option value="Homemaker">Homemaker</option>
+                  <option value="Retired">Retired</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <span class="error-msg" id="err-occupation">Select your occupation.</span>
+            </div>
+            <div class="input-group full-width hidden" id="occupationOtherWrap">
+              <label for="occupationOther">Please specify your occupation <span class="req">*</span></label>
+              <div class="input-inner">
+                <i class="fa-solid fa-user-tie"></i>
+                <input type="text" id="occupationOther" placeholder="Enter your occupation">
+              </div>
+            </div>
+
+          </div>
+
+          <div class="checkbox-stack full-width">
+            <div class="checkbox-group">
+              <label class="custom-checkbox">
+                <input type="checkbox" id="c1" required>
+                <span class="checkmark"></span>
+                <span class="label-text">I have read and understood the AXIM Wealth program terms.</span>
+              </label>
+              <span class="error-msg" id="err-c1">This declaration is required.</span>
+            </div>
+            <div class="checkbox-group">
+              <label class="custom-checkbox">
+                <input type="checkbox" id="c2" required>
+                <span class="checkmark"></span>
+                <span class="label-text">I understand that returns are not guaranteed.</span>
+              </label>
+              <span class="error-msg" id="err-c2">This declaration is required.</span>
+            </div>
+            <div class="checkbox-group">
+              <label class="custom-checkbox">
+                <input type="checkbox" id="c3" required>
+                <span class="checkmark"></span>
+                <span class="label-text">I understand that investment/trading activity involves financial risk.</span>
+              </label>
+              <span class="error-msg" id="err-c3">This declaration is required.</span>
+            </div>
+            <div class="checkbox-group">
+              <label class="custom-checkbox">
+                <input type="checkbox" id="c4" required>
+                <span class="checkmark"></span>
+                <span class="label-text">I am voluntarily participating and have not been promised a fixed/guaranteed profit.</span>
+              </label>
+              <span class="error-msg" id="err-c4">This declaration is required.</span>
+            </div>
+            <div class="checkbox-group">
+              <label class="custom-checkbox">
+                <input type="checkbox" id="c5" required>
+                <span class="checkmark"></span>
+                <span class="label-text">I have provided correct information.</span>
+              </label>
+              <span class="error-msg" id="err-c5">This declaration is required.</span>
+            </div>
+            <div class="checkbox-group">
+              <label class="custom-checkbox">
+                <input type="checkbox" id="c6" required>
+                <span class="checkmark"></span>
+                <span class="label-text">I agree to the AXIM Wealth <a href="javascript:void(0)" id="openTermsModal" style="color:var(--gold-primary);text-decoration:underline">Terms &amp; Conditions and Privacy Policy</a>.</span>
+              </label>
+              <span class="error-msg" id="err-c6">You must accept the Terms and Conditions to continue.</span>
+            </div>
+          </div>
+
+          <div id="formAlert" class="form-alert hidden"></div>
+
+          <div class="form-actions">
+            <button type="submit" id="submitBtn" class="btn btn-gold btn-block">
+              <span id="btnText">PROCEED TO PAYMENT</span>
+              <div id="btnSpinner" class="spinner hidden"></div>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <div id="paymentView" class="view-section hidden">
+    <div class="glass-card payment-card">
+      <div class="card-header">
+        <h3>Complete Your Payment</h3>
+        <p>Scan the QR code below to pay your contribution, then enter your transaction number.</p>
+      </div>
+      <div class="payment-amount">₹1,250</div>
+      <div class="qr-frame">
+        <img id="qrImage" src="https://i.ibb.co/4w27xbTv/cachesm-qr-1789016426077.png" alt="AXIM Wealth Payment QR Code"
+             onerror="this.style.display='none'; document.getElementById('qrFallback').style.display='flex';">
+        <div id="qrFallback" class="qr-placeholder" style="display:none;">
+          <i class="fa-solid fa-qrcode" style="font-size:2rem;display:block;margin-bottom:.5rem;"></i>
+          QR code image not found.<br>Replace <code>./assets/qr-code.png</code> with your payment QR image.
+        </div>
+      </div>
+      <div class="payment-steps">
+        1. Open any UPI app and scan the QR code above.<br>
+        2. Pay the exact amount: <b>₹1,250</b>.<br>
+        3. After payment, copy the <b>Transaction / UTR Number</b> from your payment app.<br>
+        4. Enter it below and click Confirm &amp; Submit.
+      </div>
+
+      <form id="paymentForm" novalidate>
+        <div class="input-group full-width">
+          <label for="transactionNo">Transaction / UTR Number <span class="req">*</span></label>
+          <div class="input-inner">
+            <i class="fa-solid fa-receipt"></i>
+            <input type="text" id="transactionNo" placeholder="e.g. 123456789012" required>
+          </div>
+          <span class="error-msg" id="err-transactionNo">Enter the transaction/UTR number from your payment.</span>
+        </div>
+
+        <div id="paymentAlert" class="form-alert hidden"></div>
+
+        <div class="form-actions">
+          <button type="submit" id="confirmPayBtn" class="btn btn-gold btn-block">
+            <span id="payBtnText">CONFIRM &amp; SUBMIT REGISTRATION</span>
+            <div id="payBtnSpinner" class="spinner hidden"></div>
+          </button>
+        </div>
+        <button type="button" id="backToFormBtn" class="payment-back">&larr; Back to edit my details</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="successView" class="view-section hidden">
+    <div class="glass-card success-card">
+      <div class="success-icon-wrapper">
+        <div class="icon-pulse"></div>
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h2 class="success-title">REGISTRATION COMPLETE</h2>
+      <p class="success-lead">Thank you for registering with AXIM Wealth.</p>
+      <p class="success-sub">Your details and payment confirmation have been securely recorded. Our team will verify your payment and contact you shortly via WhatsApp, phone, or email.</p>
+      <div class="success-actions">
+        <button id="backHomeBtn" class="btn btn-outline-gold">
+          <i class="fa-solid fa-house"></i><span>Back to Home</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="termsModal" class="modal-overlay hidden">
+  <div class="modal-card">
+    <div class="modal-header">
+      <h3>Terms and Conditions</h3>
+      <button id="closeTermsModal" class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-body">
+      <p><strong>1. Introduction</strong><br>Welcome to AXIM Wealth by GreenOOH. Please read these terms carefully before submitting your registration.</p><br>
+      <p><strong>2. Registration</strong><br>By registering and completing payment, you confirm participation in the AXIM Wealth program under the terms described here.</p><br>
+      <p><strong>3. Fixed Contribution</strong><br>The registration contribution is fixed at ₹1,250 for all eligible participants, limited to 5 participants in this pilot.</p><br>
+      <p><strong>4. Risk Disclosure</strong><br>Investment and trading activity involves financial risk. Returns are market-dependent and are not guaranteed. Past or estimated performance does not guarantee future returns.</p><br>
+      <p><strong>5. Payment</strong><br>Payment must be made only via the official QR code shown on this page. This site does not collect or store any card, bank, or UPI credentials — only the transaction/UTR reference number you provide after paying.</p><br>
+      <p><strong>6. Privacy &amp; Communication</strong><br>You consent to receive communications from AXIM Financial Solution via WhatsApp, phone call, or email regarding this registration.</p><br>
+      <p style="color:var(--gold-light)"><em>Note: You can update and edit this Terms and Conditions text manually directly inside this file whenever needed.</em></p>
+    </div>
+    <div class="modal-footer">
+      <button id="acceptTermsBtn" class="btn btn-gold btn-block" style="padding:.75rem">I Understand &amp; Accept</button>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-disclaimer">
+    <p><strong>Important Compliance Notice:</strong> Payment must be made only via the official QR code shown on this page. This site does not request or store bank passwords, card numbers, or UPI PINs — only the transaction/UTR reference number you provide after completing payment yourself. Eligibility, terms, and regulatory documentation will be communicated separately following compliance review.</p>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 AXIM Financial Solution. Built by GreenOOH. All Rights Reserved.</p>
+  </div>
+</footer>
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getDatabase, ref, set, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+/* Paste your Firebase Web App config here (same project as user.html and admin.html). */
+const firebaseConfig = {
+  apiKey: "AIzaSyAnSzZ3gsHhw3aFtHp2E3Ybz9g_ATgy3Fs",
+  authDomain: "axim-fin-sol.firebaseapp.com",
+  databaseURL: "https://axim-fin-sol-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "axim-fin-sol",
+  storageBucket: "axim-fin-sol.firebasestorage.app",
+  messagingSenderId: "584723505509",
+  appId: "1:584723505509:web:bee030916d8a1d139d418c",
+  measurementId: "G-QDBMPE4JD2"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
+/* Background particle canvas (decorative only) */
+function initCanvas(){
+  const canvas = document.getElementById('bgCanvas');
+  const ctx = canvas.getContext('2d');
+  let width = canvas.width = window.innerWidth;
+  let height = canvas.height = window.innerHeight;
+  window.addEventListener('resize', () => { width = canvas.width = window.innerWidth; height = canvas.height = window.innerHeight; });
+  const particles = [];
+  const particleCount = Math.floor((width*height)/18000);
+  class Particle{
+    constructor(){ this.reset(); }
+    reset(){
+      this.x = Math.random()*width; this.y = height + Math.random()*100;
+      this.size = Math.random()*2+0.5; this.speedY = Math.random()*0.8+0.2;
+      this.speedX = (Math.random()-0.5)*0.3; this.opacity = Math.random()*0.5+0.1;
+    }
+    update(){ this.y -= this.speedY; this.x += this.speedX; if(this.y < -10) this.reset(); }
+    draw(){ ctx.beginPath(); ctx.arc(this.x,this.y,this.size,0,Math.PI*2); ctx.fillStyle = `rgba(212,175,55,${this.opacity})`; ctx.fill(); }
+  }
+  for(let i=0;i<particleCount;i++) particles.push(new Particle());
+  function drawFinancialLine(){
+    ctx.beginPath(); ctx.moveTo(0,height*0.85);
+    ctx.bezierCurveTo(width*0.35,height*0.7,width*0.65,height*0.35,width,height*0.15);
+    const grad = ctx.createLinearGradient(0,height,width,0);
+    grad.addColorStop(0,'rgba(212,175,55,0)'); grad.addColorStop(0.5,'rgba(212,175,55,0.25)'); grad.addColorStop(1,'rgba(243,229,171,0.6)');
+    ctx.strokeStyle = grad; ctx.lineWidth = 2; ctx.stroke();
+  }
+  function animate(){ ctx.clearRect(0,0,width,height); drawFinancialLine(); particles.forEach(p=>{p.update();p.draw();}); requestAnimationFrame(animate); }
+  animate();
+}
+document.addEventListener('DOMContentLoaded', initCanvas);
+
+/* View switcher */
+const registrationView = document.getElementById('registrationView');
+const paymentView = document.getElementById('paymentView');
+const successView = document.getElementById('successView');
+function switchView(viewName){
+  registrationView.classList.add('hidden');
+  paymentView.classList.add('hidden');
+  successView.classList.add('hidden');
+  if(viewName === 'payment') paymentView.classList.remove('hidden');
+  else if(viewName === 'success') successView.classList.remove('hidden');
+  else registrationView.classList.remove('hidden');
+  window.scrollTo({ top:0, behavior:'smooth' });
+}
+document.getElementById('backHomeBtn').addEventListener('click', () => {
+  document.getElementById('interestForm').reset();
+  document.getElementById('paymentForm').reset();
+  resetOtherFields();
+  pendingRegistration = null;
+  switchView('registration');
+});
+document.getElementById('backToFormBtn').addEventListener('click', () => switchView('registration'));
+
+/* Terms modal */
+const termsModal = document.getElementById('termsModal');
+const openTermsModal = document.getElementById('openTermsModal');
+const closeTermsModal = document.getElementById('closeTermsModal');
+const acceptTermsBtn = document.getElementById('acceptTermsBtn');
+const c6 = document.getElementById('c6');
+openTermsModal.addEventListener('click', () => termsModal.classList.remove('hidden'));
+closeTermsModal.addEventListener('click', () => termsModal.classList.add('hidden'));
+acceptTermsBtn.addEventListener('click', () => {
+  c6.checked = true;
+  c6.closest('.checkbox-group').classList.remove('invalid');
+  termsModal.classList.add('hidden');
+});
+window.addEventListener('click', (e) => { if(e.target === termsModal) termsModal.classList.add('hidden'); });
+
+/* City / Occupation "Other" toggle */
+const city = document.getElementById('city');
+const cityOtherWrap = document.getElementById('cityOtherWrap');
+const cityOther = document.getElementById('cityOther');
+city.addEventListener('change', () => {
+  const isOther = city.value === 'Other';
+  cityOtherWrap.classList.toggle('hidden', !isOther);
+  if(!isOther) cityOther.value = '';
+});
+const occupation = document.getElementById('occupation');
+const occupationOtherWrap = document.getElementById('occupationOtherWrap');
+const occupationOther = document.getElementById('occupationOther');
+occupation.addEventListener('change', () => {
+  const isOther = occupation.value === 'Other';
+  occupationOtherWrap.classList.toggle('hidden', !isOther);
+  if(!isOther) occupationOther.value = '';
+});
+function resetOtherFields(){
+  cityOtherWrap.classList.add('hidden'); occupationOtherWrap.classList.add('hidden');
+}
+
+/* Form elements */
+const form = document.getElementById('interestForm');
+const submitBtn = document.getElementById('submitBtn');
+const btnText = document.getElementById('btnText');
+const btnSpinner = document.getElementById('btnSpinner');
+const formAlert = document.getElementById('formAlert');
+const fullName = document.getElementById('fullName');
+const dob = document.getElementById('dob');
+const mobile = document.getElementById('mobile');
+const email = document.getElementById('email');
+const aadhaar = document.getElementById('aadhaar');
+const state = document.getElementById('state');
+const checkboxes = ['c1','c2','c3','c4','c5','c6'].map(id => document.getElementById(id));
+
+const phoneRegex = /^[6-9]\d{9}$/;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const aadhaarRegex = /^\d{12}$/;
+
+aadhaar.addEventListener('input', () => { aadhaar.value = aadhaar.value.replace(/\D/g,'').slice(0,12); });
+
+function calcAge(dobStr){
+  const b = new Date(dobStr); const t = new Date();
+  let age = t.getFullYear() - b.getFullYear();
+  const m = t.getMonth() - b.getMonth();
+  if(m < 0 || (m === 0 && t.getDate() < b.getDate())) age--;
+  return age;
+}
+
+function validateForm(){
+  let isValid = true;
+  const check = (el, ok) => { el.closest('.input-group').classList.toggle('invalid', !ok); if(!ok) isValid = false; };
+
+  check(fullName, fullName.value.trim().length >= 2);
+  check(dob, dob.value && calcAge(dob.value) >= 18);
+  check(mobile, phoneRegex.test(mobile.value.trim()));
+  check(email, emailRegex.test(email.value.trim()));
+  check(aadhaar, aadhaarRegex.test(aadhaar.value.trim()));
+  check(city, !!city.value && (city.value !== 'Other' || cityOther.value.trim().length >= 2));
+  check(state, !!state.value);
+  check(occupation, !!occupation.value && (occupation.value !== 'Other' || occupationOther.value.trim().length >= 2));
+
+  checkboxes.forEach(cb => {
+    const ok = cb.checked;
+    cb.closest('.checkbox-group').classList.toggle('invalid', !ok);
+    if(!ok) isValid = false;
+  });
+
+  return isValid;
+}
+
+[fullName, dob, mobile, email, aadhaar, city, state, occupation, cityOther, occupationOther, ...checkboxes].forEach(el => {
+  const evt = (el.tagName === 'SELECT' || el.type === 'checkbox') ? 'change' : 'input';
+  el.addEventListener(evt, () => {
+    el.closest('.input-group, .checkbox-group')?.classList.remove('invalid');
+    formAlert.classList.add('hidden');
+  });
+});
+
+let pendingRegistration = null;
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  if(!validateForm()){
+    formAlert.textContent = 'Please complete all required fields and accept every declaration below.';
+    formAlert.className = 'form-alert error';
+    return;
+  }
+
+  const cleanMobile = mobile.value.trim();
+  const finalCity = city.value === 'Other' ? cityOther.value.trim() : city.value;
+  const finalOccupation = occupation.value === 'Other' ? occupationOther.value.trim() : occupation.value;
+
+  pendingRegistration = {
+    fullName: fullName.value.trim(),
+    dob: dob.value,
+    mobile: cleanMobile,
+    email: email.value.trim().toLowerCase(),
+    aadhaar: aadhaar.value.trim(),
+    city: finalCity,
+    state: state.value,
+    occupation: finalOccupation,
+    consentAll: true,
+    declarations: {
+      readTerms: document.getElementById('c1').checked,
+      noGuaranteedReturns: document.getElementById('c2').checked,
+      riskAcknowledged: document.getElementById('c3').checked,
+      voluntaryNoFixedProfit: document.getElementById('c4').checked,
+      infoAccurate: document.getElementById('c5').checked,
+      agreedTerms: document.getElementById('c6').checked
+    },
+    investmentAmount: 1250
+  };
+
+  switchView('payment');
+});
+
+/* Payment form */
+const paymentForm = document.getElementById('paymentForm');
+const transactionNo = document.getElementById('transactionNo');
+const paymentAlert = document.getElementById('paymentAlert');
+const confirmPayBtn = document.getElementById('confirmPayBtn');
+const payBtnText = document.getElementById('payBtnText');
+const payBtnSpinner = document.getElementById('payBtnSpinner');
+
+transactionNo.addEventListener('input', () => {
+  transactionNo.closest('.input-group').classList.remove('invalid');
+  paymentAlert.classList.add('hidden');
+});
+
+paymentForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  if(!pendingRegistration){
+    switchView('registration');
+    return;
+  }
+
+  const txn = transactionNo.value.trim();
+  if(txn.length < 4){
+    transactionNo.closest('.input-group').classList.add('invalid');
+    paymentAlert.textContent = 'Please enter a valid transaction/UTR number.';
+    paymentAlert.className = 'form-alert error';
+    return;
+  }
+
+  confirmPayBtn.disabled = true;
+  payBtnText.textContent = 'SUBMITTING...';
+  payBtnSpinner.classList.remove('hidden');
+
+  const regId = 'reg_' + pendingRegistration.mobile;
+  const finalData = {
+    ...pendingRegistration,
+    transactionNo: txn,
+    createdAt: serverTimestamp(),
+    status: 'payment_submitted'
+  };
+
+  try{
+    await set(ref(db, 'registrations/' + regId), finalData);
+    form.reset();
+    paymentForm.reset();
+    resetOtherFields();
+    pendingRegistration = null;
+    switchView('success');
+  }catch(err){
+    console.error(err);
+    paymentAlert.textContent = (err.code === 'PERMISSION_DENIED')
+      ? 'A registration with this mobile number may already exist, or submissions are temporarily closed. Please contact support.'
+      : 'Submission failed. Please check your internet connection and try again.';
+    paymentAlert.className = 'form-alert error';
+  }finally{
+    confirmPayBtn.disabled = false;
+    payBtnText.textContent = 'CONFIRM & SUBMIT REGISTRATION';
+    payBtnSpinner.classList.add('hidden');
+  }
+});
+</script>
+</body>
+</html>
